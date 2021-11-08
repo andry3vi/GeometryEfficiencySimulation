@@ -72,12 +72,13 @@ def main():
         ys_miss = list()
         zs_miss = list()
         counter = 0
-        ratio = int(args.ev/10000)
+        ratio_general = int(args.ev/10000)
+        ratio_hit = int(Gen.hit/1000)
         for ev in Gen.events:
-            if counter != ratio: 
+            if counter < ratio_general: 
                 counter +=1
                 continue
-            counter = 0
+            counter = 0 
             if ev.hit:
                 xs_hit.append(ev.x2)
                 ys_hit.append(ev.y2)
@@ -98,13 +99,15 @@ def main():
         fig2 = plt.figure(2,figsize=(9,9),dpi=100)
         ax2 = fig2.add_subplot(111, projection='3d')
 
+        counter = 0
+
         for ev in Gen.events:
-            if counter != ratio: 
-                counter +=1
-                continue
-            counter = 0
 
             if ev.hit:
+                if counter < ratio_hit: 
+                    counter +=1
+                    continue
+                counter = 0 
                 ax2.plot((ev.x1,ev.x2),(ev.y1,ev.y2),(ev.z1,ev.z2),"g-",label="Detected")            
         ax2.set_title("Ray traced detected events")
         ax2.set_xlabel("X")

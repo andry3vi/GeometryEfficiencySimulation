@@ -7,7 +7,7 @@ class Geometry:
         self.Sdiameter = Sdiameter
         self.DSdistance = DSdistance
 
-        self.SPHradius = sqrt(DSdistance**2+Ddiameter**2)
+        self.SPHradius = sqrt(DSdistance**2+(Ddiameter*0.5)**2)
 
         self.Dtheta = acos(DSdistance/self.SPHradius)
 
