@@ -11,14 +11,14 @@ class Geometry:
 
         self.Dtheta = acos(DSdistance/self.SPHradius)
 
-        print("###################################")
-        print("          Geometry defined         ")
-        print("Detector diameter -> ",self.Ddiameter)
-        print("Source diameter   -> ",self.Sdiameter)
-        print("D-S distance      -> ",self.DSdistance)
-        print("-----------------------------------")
-        print("Sphere radius     -> ",self.SPHradius)        
-        print("Theta condition   -> ",self.Dtheta)     
-        print("###################################")
+        # print("###################################")
+        # print("          Geometry defined         ")
+        # print("Detector diameter -> ",self.Ddiameter)
+        # print("Source diameter   -> ",self.Sdiameter)
+        # print("D-S distance      -> ",self.DSdistance)
+        # print("-----------------------------------")
+        # print("Sphere radius     -> ",self.SPHradius)        
+        # print("Theta condition   -> ",self.Dtheta)     
+        # print("###################################")
     
     
