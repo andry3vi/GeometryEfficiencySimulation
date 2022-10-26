@@ -96,9 +96,9 @@ def main():
 
         return
 
+    G = Geometry(args.Ddiameter,args.Sdiameter,args.DSdistance[0])
     Gen = EventGenerator(G)
 
-    G = Geometry(args.Ddiameter,args.Sdiameter,args.DSdistance[0])
 
     if args.summing is None:
 
